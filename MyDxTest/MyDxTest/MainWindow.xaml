@@ -1,0 +1,13 @@
+﻿<Window
+    x:Class="MyDxTest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyDxTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxc="using:DevExpress.WinUI.Controls"
+    xmlns:dxe="using:DevExpress.WinUI.Editors"
+    mc:Ignorable="d">
+
+    <Grid >        <StackPanel            MaxWidth="658"            Margin="0,0,0,0"            VerticalAlignment="Center"            Spacing="12">            <dxe:TextEdit                Background="Yellow"                Header="Simple"                IsSpellCheckEnabled="True"                IsTextPredictionEnabled="True"                Text="Text" />            <dxe:TextEdit Header="Null Text" NullText="Please, enter a value" />            <dxe:TextEdit                Header="Read-Only"                IsReadOnly="True"                Text="This editor is readonly" />            <dxe:TextEdit                Header="Masked Input"                NullText="Enter the phone">                <dxe:TextEdit.TextInputSettings>                    <dxe:TextInputMaskSettings                        IgnoreBlank="True"                        Mask="(\d?\d?\d?)\d\d\d-\d\d-\d\d"                        MaskType="Regular"                        SaveLiteral="True" />                </dxe:TextEdit.TextInputSettings>            </dxe:TextEdit>            <dxe:TextEdit Header="Clear Button" Text="Text">                <dxe:TextEdit.Buttons>                    <dxe:DeleteButtonInfo IsDefault="True" VisibleMode="Auto" />                </dxe:TextEdit.Buttons>            </dxe:TextEdit>        </StackPanel>    </Grid>
+</Window>
